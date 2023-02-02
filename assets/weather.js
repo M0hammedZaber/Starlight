@@ -7,8 +7,11 @@ $.ajax({
   }).then(function(response) {
   console.log(response)
             for(var i=0;i<4; i++){
-            var weatherIcon= $("<img>")   
+            var weatherIcon= $("<p>")   ;
             var weatherCondition=response.list[i].weather[0].id;
+            var divtest= $("<div>") ;
+            divtest.css("width","300px")
+            divtest.css("color","white")
             if(weatherCondition==800){
                 weatherIcon.attr("src", "https://openweathermap.org/img/wn/01d@2x.png")
               }else if(weatherCondition==801){
@@ -16,7 +19,9 @@ $.ajax({
               }else if(weatherCondition==802){
                 weatherIcon.attr("src", "https://openweathermap.org/img/wn/03d@2x.png")
               }else if(weatherCondition>=803){
-                weatherIcon.attr("src", "https://openweathermap.org/img/wn/04d@2x.png")
+                
+                weatherIcon.text("Weather: "+response.list[i].weather[0].description);
+                divtest.css({"background-image":"url(assets/images/brokencloudsN.jpg)", "background-size": "cover"})
               }else if(weatherCondition>=200 && weatherCondition<=232){
                 weatherIcon.attr("src", "https://openweathermap.org/img/wn/11d@2x.png")
               }else if(weatherCondition>=300 && weatherCondition<=321){
@@ -34,7 +39,7 @@ $.ajax({
               }    
             var p1=$("<p>").text(response.city.name +" ("+ response.list[i].dt_txt+")");
             p1.css({"font-weight": "bold"});
-            var temp=response.list[0].main.temp-273.15;
+            var temp=response.list[i].main.temp-273.15;
             var p2=$("<p>").text("Temp: "+temp.toFixed(2)+"°C");
             var p3=$("<p>").text("Visibility: up to "+response.list[i].visibility+" metres");
             //30-60% Partly cloudy. 60-70% Partly sunny. 70-90% Mostly cloudy. 90-100% Overcast.
@@ -49,8 +54,8 @@ $.ajax({
             }else if(response.list[i].clouds.all>90){
                 var p4=$("<p>").text("Cloudiness: "+response.list[i].clouds.all+"% Overcast sky");
             }
-
-            $("body").append(p1,weatherIcon,p2,p3,p4)
+            $("body").append(divtest)
+            divtest.append(p1,weatherIcon,p2,p3,p4)
         }
             
   })

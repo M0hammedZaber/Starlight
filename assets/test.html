@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://kit.fontawesome.com/d8b425b2f9.js" crossorigin="anonymous">
+    </script>
+    <script
+    type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"
+  ></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
+    <link rel="stylesheet" href="./style.css" 
+    />
+
+    <title>Document</title>
+</head>
+<body>
+<button type="button" name="button1" id="getGeolocation" class="btn btn-primary btn-lg btn-block">Get geolocation</button>
+<br>
+<br>
+<div id="buttons-view"></div>
+
+    <form id="location">
+      <label for="city-input">Add a city
+!</label>
+      <input type="text" id="movie-input"><br>
+
+      <!-- Button triggers new movie to be added -->
+      <input id="add-city" type="submit" value="Add a City">
+    </form>
+<br>
+<br>
+<div class="container">
+    <i class="fa-regular fa-sun"></i>
+      <p class="sunrise"></p>
+      <i class="fa-regular fa-moon"></i>
+      <p class="sunset"></p>
+
+</div>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="./geolocation.js"></script>
+    <script src="./logic.js"></script>
+</body>
+</html>

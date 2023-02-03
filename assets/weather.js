@@ -1,41 +1,54 @@
 //weather widget logic
-var queryURL = "https://api.openweathermap.org/data/2.5/forecast?lat=51.509865&lon=-0.118092&appid=357cdcf1a256d647fa7f59d91404eade" ;
+var getWeatherForecast=function(latitude,longitude){
+var lat=36.6754; //this will be changed later to Geolocation API feedback
+var lon=-6.5463; //this will be changed later to Geolocation API feedback
+var queryURL = "https://api.openweathermap.org/data/2.5/forecast?lat="+lat+"&lon="+lon+"&appid=357cdcf1a256d647fa7f59d91404eade" ;
 
 $.ajax({
     url: queryURL,
     method: "GET"
   }).then(function(response) {
-  console.log(response)
+  //console.log(response)
             for(var i=0;i<4; i++){
-            var weatherIcon= $("<p>")   ;
+            var weatherType= $("<p>")   ;
             var weatherCondition=response.list[i].weather[0].id;
             var divtest= $("<div>") ;
             divtest.css("width","300px")
             divtest.css("color","white")
             if(weatherCondition==800){
-                weatherIcon.attr("src", "https://openweathermap.org/img/wn/01d@2x.png")
+               // weatherIcon.attr("src", "https://openweathermap.org/img/wn/01d@2x.png")
+                weatherType.text("Weather: "+response.list[i].weather[0].description);
+                divtest.css({"background-image":"url(assets/images/clearsky.jpg)", "background-size": "cover"})
               }else if(weatherCondition==801){
-                weatherIcon.attr("src", "https://openweathermap.org/img/wn/02d@2x.png")
+                weatherType.text("Weather: "+response.list[i].weather[0].description);
+                divtest.css({"background-image":"url(assets/images/fewclouds.jpg)", "background-size": "cover"})
+             
               }else if(weatherCondition==802){
-                weatherIcon.attr("src", "https://openweathermap.org/img/wn/03d@2x.png")
+                weatherType.text("Weather: "+response.list[i].weather[0].description);
+                divtest.css({"background-image":"url(assets/images/scatteredclouds.jpg)", "background-size": "cover"})
+             
               }else if(weatherCondition>=803){
                 
-                weatherIcon.text("Weather: "+response.list[i].weather[0].description);
+                weatherType.text("Weather: "+response.list[i].weather[0].description);
                 divtest.css({"background-image":"url(assets/images/brokencloudsN.jpg)", "background-size": "cover"})
               }else if(weatherCondition>=200 && weatherCondition<=232){
-                weatherIcon.attr("src", "https://openweathermap.org/img/wn/11d@2x.png")
+                weatherType.text("Weather: "+response.list[i].weather[0].description);
+                divtest.css({"background-image":"url(assets/images/thunderstorm.jpg)", "background-size": "cover"})
               }else if(weatherCondition>=300 && weatherCondition<=321){
-                weatherIcon.attr("src", "https://openweathermap.org/img/wn/09d@2x.png")
-              }else if(weatherCondition>=500 && weatherCondition<=504){
-                weatherIcon.attr("src", "https://openweathermap.org/img/wn/10d@2x.png")
-              }else if(weatherCondition>=520 && weatherCondition<=531){
-                weatherIcon.attr("src", "https://openweathermap.org/img/wn/09d@2x.png")
+                weatherType.text("Weather: "+response.list[i].weather[0].description);
+                divtest.css({"background-image":"url(assets/images/drizzle.jpg)", "background-size": "cover"})
+              }else if(weatherCondition>=500 && weatherCondition<=531){
+                weatherType.text("Weather: "+response.list[i].weather[0].description);
+                divtest.css({"background-image":"url(assets/images/rain.jpg)", "background-size": "cover"})
               }else if(weatherCondition>=511){
-                weatherIcon.attr("src", "https://openweathermap.org/img/wn/13d@2x.png")
+                weatherType.text("Weather: "+response.list[i].weather[0].description);
+                divtest.css({"background-image":"url(assets/images/freezingrain.jpg)", "background-size": "cover"})
               }else if(weatherCondition>=600 && weatherCondition<=622){
-                weatherIcon.attr("src", "https://openweathermap.org/img/wn/13d@2x.png")
+                weatherType.text("Weather: "+response.list[i].weather[0].description);
+                divtest.css({"background-image":"url(assets/images/snow.jpg)", "background-size": "cover"})
               }else if(weatherCondition>=701 && weatherCondition<=781){
-                weatherIcon.attr("src", "https://openweathermap.org/img/wn/50d@2x.png")
+                weatherType.text("Weather: "+response.list[i].weather[0].description);
+                divtest.css({"background-image":"url(assets/images/fog.jpg)", "background-size": "cover"})
               }    
             var p1=$("<p>").text(response.city.name +" ("+ response.list[i].dt_txt+")");
             p1.css({"font-weight": "bold"});
@@ -54,8 +67,11 @@ $.ajax({
             }else if(response.list[i].clouds.all>90){
                 var p4=$("<p>").text("Cloudiness: "+response.list[i].clouds.all+"% Overcast sky");
             }
+            
             $("body").append(divtest)
-            divtest.append(p1,weatherIcon,p2,p3,p4)
+            divtest.append(p1,weatherType,p2,p3,p4)
         }
             
   })
+}
+getWeatherForecast();

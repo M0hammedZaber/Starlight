@@ -24,8 +24,53 @@
             </div>
         </div>
     </nav>
-    <div class="container-fluid">
-        <div class="row"><!-- This row is going to separate our content -->
+    <!-- This is going to create the container where the main elements of the page will be (img and sidebar) -->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12">  
+                <header class="mb-4">
+                <!-- Post title-->
+                <h1 class="fw-bolder mb-1">Generate your star Chart based on your chosen Location!</h1></div><!-- This blocks where our page title is -->
+            <div class="row"><!-- This creates another row that will hold both the side bar and main element -->
+                <div class="col-sm-12 col-md-4 col-lg-4"></div>
+                <p>This is an example</p>
+                <div class="row">
+                    <!--This is for your card for location and location storage, needs buttons, search bar and a drop down for constellatoin choices.-->
+                    <div class="col-sm-12 col-md-4 col-lg-4"></div>
+                </div>
+
+                <div class="card text-left">
+                    <img class="card-img-top" src="holder.js/100px180/" alt="">
+                    <div class="card-body">
+                        <a href="#" class="btn btn-primary">My Location</a>
+                        <p>OR</p>
+                        <div class="input-group">
+                            <input class="form-control" type="text" placeholder="Enter your location here" aria-label="Enter your location here..." aria-describedby="button-search">
+                            <button class="btn btn-primary" id="button-search" type="button">Search!</button>
+                          </div>
+                          <h4 class="card-title">Stored Locations</h4>
+                        <div class="list-group">
+                            <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+                             Location 1
+                             </a>
+                             <a href="#" class="list-group-item list-group-item-action">Location 2</a>
+                             <a href="#" class="list-group-item list-group-item-action">Location 3</a>
+                             <a href="#" class="list-group-item list-group-item-action">Location 4</a>
+                        </div>
+                         <div class="dropdown">
+                             <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Constellations</button>
+                             <ul class="dropdown-menu dropdown-menu-dark">
+                             <li><a class="dropdown-item active" href="#">Action</a></li>
+                             <li><a class="dropdown-item" href="#">Another action</a></li>
+                             <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                             <li><a class="dropdown-item" href="#">Separated link</a></li>
+                             </ul>
+                         </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="cardContainer col-lg-3 col-md-3 col-sm-12"></div>
              <div class="cardContainer col-lg-3 col-md-3 col-sm-12"></div>
              <div class="cardContainer col-lg-3 col-md-3 col-sm-12"></div>

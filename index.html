@@ -33,6 +33,80 @@
 
 
     <section class="main">
+        </div>
+    </nav>
+    <!-- This is going to create the container where the main elements of the page will be (img and sidebar) -->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12">  
+                <header class="mb-4">
+                <!-- Post title-->
+                <h1 class="fw-bolder mb-1">Generate your star Chart based on your chosen Location!</h1></div><!-- This blocks where our page title is -->
+            <div class="row"><!-- This creates another row that will hold both the side bar and main element -->
+                <div class="col-sm-12 col-md-4 col-lg-4">
+                <p>This is an example</p>
+                <div class="row">
+                    <!--This is for your card for location and location storage, needs buttons, search bar and a drop down for constellatoin choices.-->
+                    <div class="col-sm-12 col-md-4 col-lg-4"></div>
+                </div>
+
+                <div class="card text-left">
+                    <img class="card-img-top" src="holder.js/100px180/" alt="">
+                    <div class="card-body">
+                        <a href="#" class="btn btn-primary">My Location</a>
+                        <p>OR</p>
+                        <div class="input-group">
+                            <input class="form-control" type="text" placeholder="Enter your location here" aria-label="Enter your location here..." aria-describedby="button-search">
+                            <button class="btn btn-primary" id="button-search" type="button">Search!</button>
+                          </div>
+                          <h4 class="card-title">Stored Locations</h4>
+                        <div class="list-group">
+                            <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+                             Location 1
+                             </a>
+                             <a href="#" class="list-group-item list-group-item-action">Location 2</a>
+                             <a href="#" class="list-group-item list-group-item-action">Location 3</a>
+                             <a href="#" class="list-group-item list-group-item-action">Location 4</a>
+                        </div>
+                         <div class="dropdown">
+                             <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Constellations</button>
+                             <ul class="dropdown-menu dropdown-menu-dark">
+                             <li><a class="dropdown-item active" href="#">Action</a></li>
+                             <li><a class="dropdown-item" href="#">Another action</a></li>
+                             <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                             <li><a class="dropdown-item" href="#">Separated link</a></li>
+                             </ul>
+                         </div>
+                     </div>
+                    </div>
+                    <!--Within this all code added should stay in the right column-->
+                </div>
+                <div class="col-sm-12 col-md-4 col-lg-8">
+                    <p>Hello</p>
+                    <div class="row">
+                        <div class="card text-left">
+                            <img class="card-img-top" src="holder.js/100px180/" alt="">
+                        <div class="col-sm-12 col-md-4 col-lg-8">Col 2</div>
+                        <article>
+                            <img class="img-fluid rounded" src="https://dummyimage.com/900x400/ced4da/6c757d.jpg" alt="...">
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+            <div class="cardContainer col-lg-3 col-md-3 col-sm-12"></div>
+             <div class="cardContainer col-lg-3 col-md-3 col-sm-12"></div>
+             <div class="cardContainer col-lg-3 col-md-3 col-sm-12"></div>
+            <div class="cardContainer col-lg-3 col-md-3 col-sm-12"></div>
+        </div>
+        <div class="row"> <!-- This row is going to separate our content -->
+        </div>
+      </div>
+      <div class="container mt-5">
         <div class="row">
         <!-- moving this section above to here for layout purposes. -->
         <section class="sidbar">
@@ -185,6 +259,24 @@
             <!--  missing div from above, just popped it in here -->
         </div>
     </div>
+    <!-- Footer-->
+    <footer class="py-5 bg-dark">
+        <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2022</p></div>
+    </footer>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+
+      <i class="bi bi-brightness-alt-high-fill"></i>
+      <button type="button" class="btn btn-secondary">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-brightness-alt-high-fill" viewBox="0 0 16 16">
+        <path d="M8 3a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 3zm8 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zm-13.5.5a.5.5 0 0 0 0-1h-2a.5.5 0 0 0 0 1h2zm11.157-6.157a.5.5 0 0 1 0 .707l-1.414 1.414a.5.5 0 1 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm-9.9 2.121a.5.5 0 0 0 .707-.707L3.05 5.343a.5.5 0 1 0-.707.707l1.414 1.414zM8 7a4 4 0 0 0-4 4 .5.5 0 0 0 .5.5h7a.5.5 0 0 0 .5-.5 4 4 0 0 0-4-4z"/>
+      </svg>
+    </button>
+    
+
+      
     
 </section> 
         <!-- put in a section for the content to seperate from logo and navbar -->

@@ -1,1 +1,5 @@
 /* CSS bootstrap overrides (make it cool!) */
+
+.first-image {
+    object-fit: cover;
+}

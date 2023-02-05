@@ -9,12 +9,14 @@ $.ajax({
     method: "GET"
   }).then(function(response) {
   //console.log(response)
-            for(var i=0;i<4; i++){
+            for(var i=0;i<2; i++){
             var weatherType= $("<p>")   ;
             var weatherCondition=response.list[i].weather[0].id;
             var divtest= $("<div>") ;
-            divtest.css("width","300px")
+            divtest.css("width","150px")
+            divtest.css("display","inline-block")
             divtest.css("color","white")
+            divtest.addClass("m-2")
             if(weatherCondition==800){
                // weatherIcon.attr("src", "https://openweathermap.org/img/wn/01d@2x.png")
                 weatherType.text("Weather: "+response.list[i].weather[0].description);
@@ -67,8 +69,18 @@ $.ajax({
             }else if(response.list[i].clouds.all>90){
                 var p4=$("<p>").text("Cloudiness: "+response.list[i].clouds.all+"% Overcast sky");
             }
+            p1.addClass("m-0")
+            p2.addClass("m-0")
+            p3.addClass("m-0")
+            p4.addClass("m-0")
+            weatherType.addClass("m-0")
+            p1.css("font-size","10px")
+            p2.css("font-size","10px")
+            p3.css("font-size","10px")
+            p4.css("font-size","10px")
+            weatherType.css("font-size","10px")
             
-            $("body").append(divtest)
+            $("#weatherdiv").append(divtest)
             divtest.append(p1,weatherType,p2,p3,p4)
         }
             

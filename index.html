@@ -14,9 +14,7 @@
 
     <style>
         /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
-        .row {
-            height: 1500px
-        }
+      
 
         /* Set gray background color and 100% height */
         .sidenav {
@@ -38,9 +36,6 @@
                 padding: 15px;
             }
 
-            .row {
-                height: auto;
-            }
         }
     </style>
 </head>
@@ -61,7 +56,7 @@
             </ul>
         </div>
     </nav>
-        
+    
 
 <!-- SIDEBAR -->
 <div class="container-fluid">
@@ -117,28 +112,33 @@
                 <header>
                     <h1 class="fw-bolder mb-1 text-center bg-dark text-white">Generate your star chart based on your chosen location</h1>
                 </header>
-
-
-                <div class="d-flex bd-highlight">
-                    <div class="p-2 flex-fill bd-highlight">Current Weather
-                        <br>
-                    <img class="images" id="first-image" src="/assets/images/placeholder-current-weather.png" alt="" width="300px" height="100px"></div>
-                    <div class="p-2 flex-fill bd-highlight">Sunrise</div>
-                    <div class="p-2 flex-fill bd-highlight">Sunset</div>
-                            <div class="container">
-                                <br>
-                                <br>
-                                <br>
-                                <br>
-                                <br>
-                                <br>
-                                <br>
-                                <br>
-<img class="images" id="first-image" src="/assets/images/star-placeholder.png" alt="" width="750px" height="400px"></div>
-                        </div> 
+                <div class="row">
+                    <div class="col-sm-8">
+                      <div class="well">
+                        <h4>Weather</h4>
+                        <p>Lorem Ipsum</p> 
+                      </div>
                     </div>
-                    </div> 
-                </div> 
+                    <div class="col-sm-4">
+                      <div class="well">
+                        <h4>Sunset and sunrise</h4>
+                        <p>Lorem ipsum</p> 
+                      </div>
+                    </div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <div class="well">
+                        <h4>Star Chart</h4>
+                        <p>Lorem Ipsum</p> 
+                      </div>
+                    </div>
+                    
+                    
+                  </div>
+                    
+            </div> 
 
     <!-- FOOTER -->
 

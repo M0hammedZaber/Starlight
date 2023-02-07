@@ -14,10 +14,12 @@ $.ajax({
             var weatherType= $("<p>")   ;
             var weatherCondition=response.list[i].weather[0].id;
             var divtest= $("<div>") ;
-            divtest.css("width","150px")
+            divtest.css("width","160px")
             divtest.css("display","inline-block")
-            divtest.css("color","white")
-            divtest.addClass("m-2")
+            divtest.css({"color":"white"})
+            
+            divtest.addClass("m-2 p-2 rounded")
+            
             if(weatherCondition==800){
                // weatherIcon.attr("src", "https://openweathermap.org/img/wn/01d@2x.png")
                 weatherType.text("Weather: "+response.list[i].weather[0].description);

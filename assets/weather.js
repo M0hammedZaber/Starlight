@@ -1,7 +1,8 @@
 //weather widget logic
 var getWeatherForecast=function(latitude,longitude){
-var lat=36.6754; //this will be changed later to Geolocation API feedback
-var lon=-6.5463; //this will be changed later to Geolocation API feedback
+var lat=latitude; //this will be changed later to Geolocation API feedback
+var lon=longitude; //this will be changed later to Geolocation API feedback
+
 var queryURL = "https://api.openweathermap.org/data/2.5/forecast?lat="+lat+"&lon="+lon+"&appid=357cdcf1a256d647fa7f59d91404eade" ;
 
 $.ajax({

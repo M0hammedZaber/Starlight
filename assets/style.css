@@ -10,14 +10,12 @@
 
 /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
 .row {
-    height: 100%;
     background-image: url("/assets/images/Constellation-background.png");
 }
 
 /* Set gray background color and 100% height */
 .container-fluid {
-    background-color: #f1f1f1;
-    height: 100%;
+    /* background-color: #f1f1f1; */
     background-image: url("assets/images/Constellation-background.png");
 }
 
@@ -29,10 +27,10 @@
 
 .constellation {
     color: #403d3d;
+    
 }
-
 /* Set black background color, white text and some padding */
-footer {
+.footer{
     background-color: #555;
     color: white;
     padding: 15px;
@@ -43,10 +41,24 @@ fieldset {
     label {
       display: block;
       margin: 30px 0 0 0;
+      
     }
     .overflow {
       height: 200px;
     }
+#constellation-button{
+    width: 100%;
+}
+.well{
+    background-color: rgba(255, 255, 255, 0.664) ;
+}
+
+.ui-state-active:hover{
+    background-color: #555;
+}
+#sidebar{
+    background-color: rgba(255, 255, 255, 0.664) ;
+}
 /* On small screens, set height to 'auto' for sidenav and grid */
 @media screen and (max-width: 767px) {
     .sidenav {

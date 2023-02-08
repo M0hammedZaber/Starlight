@@ -15,7 +15,7 @@
     <script src="https://kit.fontawesome.com/d8b425b2f9.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
-    <script rel="stylesheet" href="./assets/style.css"></script>
+    <link rel="stylesheet" href="assets/style.css"></link>
     
 
 </head>
@@ -43,13 +43,13 @@
 <!-- SIDEBAR -->
 <div class="container-fluid">
         <div class="row">
-            <div class="col-sm-12 col-md-4 col-lg-2 sidenav">
-                <div class=" card text-left">
-                    <img class="card-img-top" src="holder.js/100px180/" alt="">
+            <div  class="col-sm-12 col-md-4 col-lg-2 sidenav">
+                <div id="sidebar"  class="card text-left">
+                    <!-- <img class="card-img-top" src="holder.js/100px180/" alt=""> -->
                      <div class="card-body"> 
                     <img src="assets/images/Logo.png" class="img-thumbnail" alt="logo of the webpage">
                 </div>
-                <div class="constellation">
+                <div  class="mb-3 constellation">
                   <form action="#">
                     <label for="constellation">Select a constellation</label>
                     <select class="btn btn-dark bg-white dropdown-toggle" type="button" data-bs-toggle="dropdown" name="constellation" id="constellation">
@@ -58,11 +58,11 @@
                     </form>
                   </div>
                   <!-- Location and Storage -->
-                  <a href="#" class="btn btn-dark" id="getGeolocation">My Location</a>
+                  <a href="#" class="btn btn-dark mb-3" id="getGeolocation">My Location</a>
                   <br>
                   <center>OR</center>
                   <br>
-                  <div class="input-group">
+                  <div class="my-3 input-group">
                     <input class="form-control" type="text" placeholder="Enter your UK location here" aria-label="Enter your UK location here..." aria-describedby="button-search">
                     <div class="input-group-append">
                       <button class="btn btn-dark" id="add-city" type="button">Search!</button>

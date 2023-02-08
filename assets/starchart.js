@@ -13,7 +13,7 @@
     const hash = btoa(`${apiKey}:${apiSecret}`);
   
     var body = JSON.stringify( {
-      "style": "default",
+      "style": "red",
       "observer": {
           "latitude": lat,
           "longitude": lon,

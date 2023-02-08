@@ -6,13 +6,19 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/d8b425b2f9.js" crossorigin="anonymous">
     </script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    
+
 </head>
 
 <body>
@@ -38,6 +44,7 @@
 <!-- SIDEBAR -->
 <div class="container-fluid">
         <div class="row">
+
             <div class="col-sm-12 col-md-4 col-lg-2 sidenav">
                 <div class=" card text-left">
                     <img class="card-img-top" src="holder.js/100px180/" alt="">
@@ -45,9 +52,14 @@
                     <img src="assets/images/Logo.png" class="img-thumbnail" alt="logo of the webpage">
                 </div>
                 <div class="constellation">
-                  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Constellations
-                  </button>
+                  
+                  <form action="#">
+                    <label for="constellation">Select a constellation</label>
+                    <select class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" name="constellation" id="constellation">
+                      
+                    </select>
+                    </form>
+
                 </div>
                   <a href="#" class="btn btn-primary" id="getGeolocation">My Location</a>
                   <br>
@@ -76,24 +88,24 @@
                 <!--Main section for Weather, Sunrise/Sunset and Constellation Chart-->
                 <div class="row">
                     <div class="col-sm-8">
-                      <div class="well">
+                      <div id="weatherdiv" class="well">
                         <h4>Weather</h4>
-                        <p>Lorem Ipsum</p> 
+                        
                       </div>
                     </div>
                     <div class="col-sm-4">
-                      <div class="well">
-                        <h4>Sunset and sunrise</h4>
-                        <p>Lorem ipsum</p> 
+                      <div id="riseset" class="well">
+                        <h4>Sunrise and Sunset</h4>
+                        
                       </div>
                     </div>
                     
                   </div>
                   <div class="row">
                     <div class="col-sm-12">
-                      <div class="well">
+                      <div id="starchartdiv" class="well">
                         <h4>Star Chart</h4>
-                        <p>Lorem Ipsum</p> 
+                        <img id="star-chart" src=""></img>
                       </div>
                     </div>
                   </div>
@@ -103,11 +115,15 @@
     <!-- FOOTER -->
 
     <footer class="py-5 bg-dark">
-        <div class="container-flex"><p class="m-0 text-center text-white">Copyright Starlight - Website 2022</p></div>
+
+
+        <div class="container-flex"><p class="m-0 text-center text-white">Copyright &copy; Starlight 2022</p></div>
+
+
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/weather.js"></script>   
+    <script src="assets/weather.js"></script>
     <script src="assets/starchart.js"></script>
     <script src="assets/logic.js"></script>
     <script src="assets/geolocation.js"></script>

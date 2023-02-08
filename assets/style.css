@@ -4,23 +4,25 @@
     object-fit: cover;
 }
 
-
+#star-chart {
+    width: 100%;
+}
 
 /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
 .row {
     height: 100%;
-    background-image: url(assets/images/Constellation-background.png);
+    background-image: url("/assets/images/Constellation-background.png");
 }
 
 /* Set gray background color and 100% height */
-.sidenav {
+.container-fluid {
     background-color: #f1f1f1;
     height: 100%;
-    background-image: url(assets/images/Constellation-background.png);
+    background-image: url("assets/images/Constellation-background.png");
 }
 
 .col-sm-10 {
-    background-image: url(assets/images/Constellation-background.png);
+    background-image: url("assets/images/Constellation-background.png");
 }
 
 /* constellation drop down */

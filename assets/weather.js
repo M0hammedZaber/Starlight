@@ -1,7 +1,8 @@
 //weather widget logic
 var getWeatherForecast=function(latitude,longitude){
-var lat=36.6754; //this will be changed later to Geolocation API feedback
-var lon=-6.5463; //this will be changed later to Geolocation API feedback
+var lat=latitude; //this will be changed later to Geolocation API feedback
+var lon=longitude; //this will be changed later to Geolocation API feedback
+
 var queryURL = "https://api.openweathermap.org/data/2.5/forecast?lat="+lat+"&lon="+lon+"&appid=357cdcf1a256d647fa7f59d91404eade" ;
 
 $.ajax({
@@ -9,14 +10,16 @@ $.ajax({
     method: "GET"
   }).then(function(response) {
   //console.log(response)
-            for(var i=0;i<2; i++){
+            for(var i=0;i<4; i++){
             var weatherType= $("<p>")   ;
             var weatherCondition=response.list[i].weather[0].id;
             var divtest= $("<div>") ;
-            divtest.css("width","150px")
+            divtest.css("width","160px")
             divtest.css("display","inline-block")
-            divtest.css("color","white")
-            divtest.addClass("m-2")
+            divtest.css({"color":"white"})
+            
+            divtest.addClass("m-2 p-2 rounded")
+            
             if(weatherCondition==800){
                // weatherIcon.attr("src", "https://openweathermap.org/img/wn/01d@2x.png")
                 weatherType.text("Weather: "+response.list[i].weather[0].description);
@@ -56,15 +59,15 @@ $.ajax({
             p1.css({"font-weight": "bold"});
             var temp=response.list[i].main.temp-273.15;
             var p2=$("<p>").text("Temp: "+temp.toFixed(2)+"°C");
-            var p3=$("<p>").text("Visibility: up to "+response.list[i].visibility+" metres");
+            var p3=$("<p>").text("Visibility: up to "+response.list[i].visibility+"m");
             //30-60% Partly cloudy. 60-70% Partly sunny. 70-90% Mostly cloudy. 90-100% Overcast.
-            if(response.list[i].clouds.all<30){
+            if(response.list[i].clouds.all<=30){
                 var p4=$("<p>").text("Cloudiness: "+response.list[i].clouds.all+"% Clear sky");
-            }else if(response.list[i].clouds.all<60 && response.list[i].clouds.all>30){
+            }else if(response.list[i].clouds.all<=60 && response.list[i].clouds.all>30){
                 var p4=$("<p>").text("Cloudiness: "+response.list[i].clouds.all+"% Partly cloudy");
-            }else if(response.list[i].clouds.all<70 && response.list[i].clouds.all>60){
+            }else if(response.list[i].clouds.all<=70 && response.list[i].clouds.all>60){
                 var p4=$("<p>").text("Cloudiness: "+response.list[i].clouds.all+"% Partly sunny");
-            }else if(response.list[i].clouds.all<90 && response.list[i].clouds.all>70){
+            }else if(response.list[i].clouds.all<=90 && response.list[i].clouds.all>70){
                 var p4=$("<p>").text("Cloudiness: "+response.list[i].clouds.all+"% Mostly cloudy");
             }else if(response.list[i].clouds.all>90){
                 var p4=$("<p>").text("Cloudiness: "+response.list[i].clouds.all+"% Overcast sky");

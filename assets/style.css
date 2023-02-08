@@ -3,3 +3,57 @@
 .first-image {
     object-fit: cover;
 }
+
+
+
+/* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+.row {
+    height: 100%;
+    background-image: url(assets/images/Constellation-background.png);
+}
+
+/* Set gray background color and 100% height */
+.sidenav {
+    background-color: #f1f1f1;
+    height: 100%;
+    background-image: url(assets/images/Constellation-background.png);
+}
+
+.col-sm-10 {
+    background-image: url(assets/images/Constellation-background.png);
+}
+
+/* constellation drop down */
+
+.constellation {
+    color: #403d3d;
+}
+
+/* Set black background color, white text and some padding */
+footer {
+    background-color: #555;
+    color: white;
+    padding: 15px;
+}
+fieldset {
+      border: 0;
+    }
+    label {
+      display: block;
+      margin: 30px 0 0 0;
+    }
+    .overflow {
+      height: 200px;
+    }
+/* On small screens, set height to 'auto' for sidenav and grid */
+@media screen and (max-width: 767px) {
+    .sidenav {
+        height: auto;
+        padding: 15px;
+    }
+
+    .row {
+        height: auto;
+    }
+}
+

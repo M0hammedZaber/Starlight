@@ -7,7 +7,8 @@
 
 /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
 .row {
-    height: 1500px
+    height: 100%;
+    background-image: url(assets/images/Constellation-background.png);
 }
 
 /* Set gray background color and 100% height */
@@ -19,6 +20,12 @@
 
 .col-sm-10 {
     background-image: url(assets/images/Constellation-background.png);
+}
+
+/* constellation drop down */
+
+.constellation {
+    color: #403d3d;
 }
 
 /* Set black background color, white text and some padding */

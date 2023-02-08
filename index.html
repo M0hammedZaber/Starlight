@@ -11,40 +11,14 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-
-    <style>
-        /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
-      
-
-        /* Set gray background color and 100% height */
-        .sidenav {
-            background-color: #f1f1f1;
-            height: 100%;
-        }
-
-        /* Set black background color, white text and some padding */
-        footer {
-            background-color: #555;
-            color: white;
-            padding: 15px;
-        }
-
-        /* On small screens, set height to 'auto' for sidenav and grid */
-        @media screen and (max-width: 767px) {
-            .sidenav {
-                height: auto;
-                padding: 15px;
-            }
-
-        }
-    </style>
     <script src="https://kit.fontawesome.com/d8b425b2f9.js" crossorigin="anonymous">
     </script>
 </head>
 
 <body>
 <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+ <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
         <a class="navbar-brand" href="#">Starlight</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
             aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation"><span
@@ -57,66 +31,50 @@
                 <li class="nav-item"><a class="nav-link" href="#">Star Chart</a></li>
             </ul>
         </div>
-    </nav>
+    </div>
+</nav>
     
 
 <!-- SIDEBAR -->
-<style>
-    .sidenav
-</style>
 <div class="container-fluid">
         <div class="row">
-            <div class="col-sm-2 sidenav">
-                <div class="text-center">
-                    <img src="assets/images/Logo.png" class="img-thumbnail" alt="logo of the">
-                  </div>
-                    <br>
-                    <br>
-                <ul class="nav nav-pills nav-stacked">
-                    <li><a href="#" class="btn btn-primary">Get my Location</a></li>
-                    <br>
-                    <br>
-                    <br><li>OR</li>
-                    <br>
-                    <br>
-                    <li>
-
-                        <div class="input-group"><input class="form-control" type="text"
-                                placeholder="Enter your location here" aria-label="Enter your location here..."
-                                aria-describedby="button-search">
-                                <br>
-                                <br>
-                                <br>
-                            <button class="btn btn-primary" id="button-search" type="button">Search / Store my Location</button>
-                            <br>
-                            <br>
-                        </div>
-                    </li>
-                    <li>
-                        <h4 class="card-title">Stored Locations</h4>
-                        <br>
-                    <li>
-                        <div class="list-group"><a href="#" class="list-group-item list-group-item-action active"
-                                aria-current="true">Stored location 1</a><a href="#"
-                                class="list-group-item list-group-item-action">Stored location 2</a><a href="#"
-                                class="list-group-item list-group-item-action">Stored location 3</a>
-                        </div>
-                    </li>
-                </ul>
-                <br>
-                <div class="dropdown"> <button class="btn btn-secondary dropdown-toggle" type="button"
-                        data-bs-toggle="dropdown" aria-expanded="false">Choose a Constellation</button> 
-                    <ul class="dropdown-menu dropdown-menu-dark">
-                        <li><a class="dropdown-item active" href="#">Constellation option 1</a></li>
-                        <li><a class="dropdown-item" href="#">Constellation option 2</a></li>
-                        <li><a class="dropdown-item" href="#">Constellation option 3</a></li>
-                    </ul>
+            <div class="col-sm-12 col-md-4 col-lg-2 sidenav">
+                <div class=" card text-left">
+                    <img class="card-img-top" src="holder.js/100px180/" alt="">
+                     <div class="card-body"> <!-- Need to close this -->
+                    <img src="assets/images/Logo.png" class="img-thumbnail" alt="logo of the webpage">
                 </div>
+                <div class="constellation">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Constellations
+                  </button>
+                </div>
+                  <a href="#" class="btn btn-primary">My Location</a>
+                  <p>OR</p>
+                  <div class="input-group">
+                    <input class="form-control" type="text" placeholder="Enter your location here" aria-label="Enter your location here..." aria-describedby="button-search">
+                    <button class="btn btn-primary" id="button-search" type="button">Search!</button>
+                  </div>
+                  <h4 class="card-title">Stored Locations</h4>
+                  <div class="list-group">
+                    <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+                      Location 1
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">Location 2</a>
+                    <a href="#" class="list-group-item list-group-item-action">Location 3</a>
+                    <a href="#" class="list-group-item list-group-item-action">Location 4</a>
+                  </div>
+              </div>
             </div>
+            <!--Within this all code added should stay in the right column-->
+        </div>
+        
+            <!--Title across page-->
             <div class="col-sm-10">
                 <header>
                     <h1 class="fw-bolder mb-1 text-center bg-dark text-white">Generate your star chart based on your chosen location</h1>
                 </header>
+                <!--Main section for Weather, Sunrise/Sunset and Constellation Chart-->
                 <div class="row">
                     <div class="col-sm-8">
                       <div class="well">
@@ -139,8 +97,6 @@
                         <p>Lorem Ipsum</p> 
                       </div>
                     </div>
-                    
-                    
                   </div>
                     
             </div> 
@@ -148,9 +104,7 @@
     <!-- FOOTER -->
 
     <footer class="py-5 bg-dark">
-        <div class="container-flex"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2022</p></div>
-
-
+        <div class="container-flex"><p class="m-0 text-center text-white">Copyright Starlight - Website 2022</p></div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>

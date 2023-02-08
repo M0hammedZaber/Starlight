@@ -25,11 +25,14 @@ $(bGeolocation).on('click', async function(event) { //listening event triggers a
 const onSuccess = async (position) => { //if geolocation supported, this triggers response from API
     const latitude = position.coords.latitude;
     const longitude = position.coords.longitude;
+    const constellation = $("#constellation").children("option:selected").data("name");
+    console.log(constellation)
     locale=[latitude, longitude];
     getSunsetSunrise(latitude,longitude);
     //GETWEATHER(latitude,longitude) needs to go here
-    getWeatherForecast(latitude,longitude)
+    getWeatherForecast(latitude,longitude);
     //star chart logic will go here with latitude and longitude as parameters
+    starChart(latitude,longitude,constellation);
 };
 const onError = () => { //if geolocation fails for different reasons than browser not supporting it, this will catch the error
     swal("Error!", "Something went wrong, please use the search function");

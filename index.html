@@ -15,7 +15,7 @@
     <script src="https://kit.fontawesome.com/d8b425b2f9.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
-    <link rel="stylesheet" href="assets/style.css"></link>
+    <link rel="stylesheet" href="./assets/style.css"></link>
     
 
 </head>
@@ -31,9 +31,9 @@
         <div class="collapse navbar-collapse" id="navbarText">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item"><a class="nav-link" href="#getGeolocation">Location</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Weather</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Constellations</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Star Chart</a></li>
+                <li class="nav-item"><a class="nav-link" href="#weatherdiv">Weather</a></li>
+                <li class="nav-item"><a class="nav-link" href="#constellations">Constellations</a></li>
+                <li class="nav-item"><a class="nav-link" href="#starchartdiv">Star Chart</a></li>
             </ul>
         </div>
     </div>
@@ -49,9 +49,9 @@
                      <div class="card-body"> 
                     <img src="assets/images/Logo.png" class="img-thumbnail" alt="logo of the webpage">
                 </div>
-                <div  class="mb-3 constellation">
+                <div  class="mb-3 constellation" id="constellations">
                   <form action="#">
-                    <label for="constellation">Select a constellation</label>
+                    <label for="constellation"><center>Select a Constellation</center></label>
                     <select class="btn btn-dark bg-white dropdown-toggle" type="button" data-bs-toggle="dropdown" name="constellation" id="constellation">
 
                     </select>
@@ -127,6 +127,7 @@
     <script src="assets/logic.js"></script>
     <script src="assets/geolocation.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 </body>
 

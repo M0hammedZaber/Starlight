@@ -23,6 +23,8 @@ $(bGeolocation).on('click', async function(event) { //listening event triggers a
     }
 });
 const onSuccess = async (position) => { //if geolocation supported, this triggers response from API
+    $("#weatherdiv").empty();
+    $("#riseset").empty();
     const latitude = position.coords.latitude;
     const longitude = position.coords.longitude;
     const constellation = $("#constellation").children("option:selected").data("name");
@@ -48,7 +50,8 @@ var weatherAPIKey = "bcd5dfb52cbaa31bb6075c699f0b7d1a";
 var storage = localStorage.getItem("city");
 
 $(cityButton).on("click",function(event) {
-    event.preventDefault();
+    
+    //event.preventDefault();    
     var eventTargetValue = cityName.val();
     var queryURL = "https://api.openweathermap.org/data/2.5/weather?q="+eventTargetValue.trim()+",uk&appid=" + weatherAPIKey;
     
@@ -61,7 +64,7 @@ $(cityButton).on("click",function(event) {
       }).then(function(response) {
         var lat = response.coord.lat;
         var lon = response.coord.lon;
-
+        
         var newCity = JSON.parse(localStorage.getItem("cities")) || [];
         if (!Array.isArray(newCity)) { //=if an array is not (!) an array, it executes the following code
             newCity = [];
@@ -96,6 +99,8 @@ $(cityButton).on("click",function(event) {
 //add on click event on location  buttons to get the city name and pass it to weather api for lat and lon
 $(".location").on("click",function(event) {
     event.preventDefault();
+    $("#weatherdiv").empty();
+     $("#riseset").empty();
     console.log(event);
     var cityValue = event.target.textContent.trim();
     console.log(cityValue);
@@ -107,10 +112,12 @@ $(".location").on("click",function(event) {
       }).then(function(response) {
         var lat = response.coord.lat;
         var lon = response.coord.lon;
+        const constellation = $("#constellation").children("option:selected").data("name");
         getSunsetSunrise(lat,lon);
         //getweather will go here, with lat and lon as parameters
         getWeatherForecast(lat,lon)
         //star chart logic will go here with lat and lon as parameters
+        starChart(lat,lon,constellation);
       });
     });
     

@@ -48,7 +48,7 @@
             <div class="col-sm-12 col-md-4 col-lg-2 sidenav">
                 <div class=" card text-left">
                     <img class="card-img-top" src="holder.js/100px180/" alt="">
-                     <div class="card-body"> <!-- Need to close this -->
+                     <div class="card-body"> 
                     <img src="assets/images/Logo.png" class="img-thumbnail" alt="logo of the webpage">
                 </div>
                 <div class="constellation">
@@ -61,18 +61,19 @@
                     </form>
 
                 </div>
-                  <button id="getGeolocation" class="btn btn-primary">My Location</button>
-                  <p>OR</p>
+                  <a href="#" class="btn btn-primary" id="getGeolocation">My Location</a>
+                  <br>
+                  <center>OR</center>
+                  <br>
                   <div class="input-group">
-                    <input id="movie-input" class="form-control" type="text" placeholder="Enter your location here" aria-label="Enter your location here..." aria-describedby="city-input">
+                    <input class="form-control" type="text" placeholder="Enter your location here" aria-label="Enter your location here..." aria-describedby="button-search">
                     <button class="btn btn-primary" id="add-city" type="button">Search!</button>
                   </div>
                   <h4 class="card-title">Stored Locations</h4>
                   <div class="list-group">
-                    <button type="button" name="" id="location1" class="location btn btn-primary btn-lg btn-block">Stored location 1</button>
-                                <button type="button" name="" id="location2" class="location btn btn-primary btn-lg btn-block">Stored location 2</button>
-                                <button type="button" name="" id="location3" class="location btn btn-primary btn-lg btn-block">Stored location 3</button>
-                    
+                    <a href="#" class="list-group-item list-group-item-action" id="location1"></a>
+                    <a href="#" class="list-group-item list-group-item-action" id="location2"></a>
+                    <a href="#" class="list-group-item list-group-item-action" id="location3"></a>
                   </div>
               </div>
             </div>

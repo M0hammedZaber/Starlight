@@ -103,13 +103,13 @@ var getSunsetSunrise = function(latitude,longitude) {
     }) .then(function(response){
         var sunrise = response.results.sunrise;
         var sunset = response.results.sunset;
-        
+        $("#riseset").append(("<h4>Sunrise and Sunset</h4>"))
         var riseicon=$("<i>")
         var seticon=$("<i>")
         riseicon.addClass("fas fa-sun")
         seticon.addClass("fas fa-moon")
-        riseicon.text(" "+sunrise); // ------------needs updating; originally was attached directly to the icon
-        seticon.text(" "+sunset); // ------------needs updating; originally was attached directly to the icon
+        riseicon.text(" "+sunrise+" "); // ------------needs updating; originally was attached directly to the icon
+        seticon.text(" "+sunset+" "); // ------------needs updating; originally was attached directly to the icon
         $("#riseset").append(riseicon,seticon)
     });
 }

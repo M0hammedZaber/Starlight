@@ -10,6 +10,7 @@ $.ajax({
     method: "GET"
   }).then(function(response) {
   //console.log(response)
+            $("#weatherdiv").append(("<h4>Weather</h4>"))
             for(var i=0;i<4; i++){
             var weatherType= $("<p>")   ;
             var weatherCondition=response.list[i].weather[0].id;

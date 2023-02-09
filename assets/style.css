@@ -10,7 +10,7 @@
 
 /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
 .row {
-    background-image: url("/assets/images/Constellation-background.png");
+    background-image: url("assets/images/Constellation-background.png");
 }
 
 /* Set gray background color and 100% height */

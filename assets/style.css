@@ -7,6 +7,9 @@
 #star-chart {
     width: 100%;
 }
+ul.navbar-nav{
+    text-align: center;
+}
 
 /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
 .row {

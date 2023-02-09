@@ -13,9 +13,9 @@ The weather values will show users necessary information to determine whether th
 
 
 ## Full Page Screenshot
-![Webpage Screenshot](/Users/marianaserrao/Bootcamp/personal-portofolio/Images/Full-screen-screenshot.png)
+![Webpage Screenshot](https://github.com/M0hammedZaber/Starlight/blob/main/assets/images/largescreenshot.png)
 ### Smallest Screen-size Screenshot
-![Small Screen Webpage Screenshot](/Users/marianaserrao/Bootcamp/personal-portofolio/Images/smallest-screen-webpage-screenshot.png)
+![Small Screen Webpage Screenshot](https://github.com/M0hammedZaber/Starlight/blob/main/assets/images/smallscreenshot.png)
 
 ## Link
 You can find the webpage [here](https://m0hammedzaber.github.io/Starlight/)
